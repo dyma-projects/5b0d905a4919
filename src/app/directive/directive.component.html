@@ -1,0 +1,23 @@
+<div>
+  <button (click)="toggleDiv()">Toggle Div</button>
+  <p [ngStyle]="checkForStyle" >Ce paragraphe changera de style</p>
+</div>
+<div *ngIf="isClicked">
+  <p [ngStyle]="checkForStyle" >Bonjour is clicked = true</p>
+</div>
+<div *ngIf="isClicked">
+   <input type="text" [(ngModel)]="doubleBinding">
+   <p>Gourmand en ressources : {{ doubleBinding }}</p>
+</div>
+<div *ngIf="isClicked">
+    Un exemple de string interpolation: {{ lastDiv }}
+</div>
+<br>
+<hr>
+<p *ngIf="status">p1</p>
+<p *ngIf="!status">p2</p>
+<button (click)="status = !status">My button</button>
+<hr>
+<ul>
+  <li *ngFor="let text of texts">{{ text }}</li>
+</ul>
